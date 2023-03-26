@@ -1,2 +1,2 @@
-# RA_Frontend
+# BeautyWorld
 Смолин Антон Евгеньевич
