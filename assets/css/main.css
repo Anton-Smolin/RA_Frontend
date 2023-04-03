@@ -1,28 +1,70 @@
-html {
+html,
+body {
     box-sizing: border-box;
-    color: #333;
     height: 100%;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
 }
 
 *,
 *::before,
 *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
     box-sizing: inherit;
 }
 
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
 a {
-    color: #278AFF;
     text-decoration: underline;
+    color: #278AFF;
+    transition: all .2s;
 }
 
 a:hover {
     color: #00BF78;
-    ;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
-    height: 100%;
+.subtitle {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.body {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.wrapper {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
 }
 
 .container {
@@ -31,25 +73,28 @@ body {
 }
 
 .header {
-    background: #F8F6F7 url("../img/hero_bg.jpg") repeat;
+    background: #F8F6F7 url("../images/hero_bg.jpg") repeat;
+}
+
+.header
+.container {
+    position: relative;
+    padding: 30px 0 130px;
     overflow: hidden;
 }
 
-.header .container {
-    position: relative;
-    padding: 30px 0 130px;
-}
-
 .header__wrapper {
+    margin: 0 0 120px 0;
+    z-index: 1;
     display: flex;
     position: relative;
-    margin: 0 0 120px 0;
     justify-content: space-between;
     align-items: baseline;
-    z-index: 1;
+    gap: 28px;
 }
 
 .header__logo {
+    min-width: fit-content;
     color: #333;
     font-weight: 700;
     font-size: 24px;
@@ -61,10 +106,17 @@ body {
     color: #333;
 }
 
-.header__menu ul {
+nav {
+    display: flex;
+}
+
+.menu ul {
     margin: 0;
     padding: 0;
     display: flex;
+    min-width: fit-content;
+    flex-wrap: wrap;
+    gap: 12px 28px;
     list-style: none;
 }
 
@@ -76,12 +128,9 @@ body {
     text-decoration: none;
 }
 
-.header__menu li:not(:last-child) {
-    margin: 0 28px 0 0;
-}
-
 .header__info {
     text-align: right;
+    min-width: fit-content;
 }
 
 .header__info__phone {
@@ -101,11 +150,8 @@ body {
     max-width: 540px;
 }
 
-h1 {
+.hero__title {
     margin: 0 0 16px 0;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 59px;
 }
 
 .hero__text__subtitle {
@@ -115,16 +161,27 @@ h1 {
     margin: 0 0 60px 0;
 }
 
-.button__l__pr {
-    background: #FB9475;
-    border-radius: 24px;
+.button {
+    padding: 10px 20px;
+    border-radius: 48px;
     border: 0;
-    padding: 17px 30px;
+    background: #FB9475;
+    color: #FFFFFF;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 14px;
     text-align: center;
-    color: #FFFFFF;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.button:hover {
+    background: #ffa589;
+}
+
+.button__large {
+    padding: 17px 30px;
+    font-size: 14px;
 }
 
 .hero__image {
@@ -135,10 +192,10 @@ h1 {
 }
 
 .hero__image:before {
+    content: '';
     position: absolute;
     bottom: -110px;
     right: 3px;
-    content: '';
     width: 472px;
     height: 472px;
     border-radius: 50%;
@@ -152,6 +209,30 @@ h1 {
     max-height: 510px;
 }
 
+.socials .socials__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.hero__socials {
+    position: absolute;
+    top: 45%;
+    right: 0;
+}
+
+.hero__socials .socials__list {
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero__socials .socials__item {
+    width: 32px;
+    height: 32px;
+}
+
 .about__wrapper {
     padding: 94px 0 50px;
     display: flex;
@@ -163,39 +244,15 @@ h1 {
     max-width: 570px;
 }
 
-h2 {
-    margin: 0 0 32px 0;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 59px;
-}
-
-.h2_subtitle {
-    margin: 0 0 16px 0;
-    font-size: 20px;
-    line-height: 32px;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-}
-
-.body {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-}
-
 .about__video {
-    display: flex;
-    flex-direction: column;
     width: 445px;
     height: 296px;
+    display: flex;
+    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/video_preview.jpg) no-repeat center / cover;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/video_preview.jpg) no-repeat center/100%;
-    border-radius: 8px;
 }
 
 .video__play {
@@ -218,15 +275,20 @@ p {
 }
 
 .advantages__wraper {
-    padding: 50px 0 100px;
+    padding: 50px 0 50px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
 .advantages__card {
-    width: 100%;
-    text-align: center;
     padding: 0 20px;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .advantages__card__icon {
@@ -235,11 +297,8 @@ p {
     height: 48px;
 }
 
-h3 {
+.advantages__card__title {
     margin: 0 0 12px 0;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
 }
 
 .advantages__card__text {
@@ -248,15 +307,48 @@ h3 {
     line-height: 22px;
 }
 
+.section__title {
+    margin: 0 0 32px 0;
+}
+
+.services__wrapper {
+    padding: 50px 0 50px;
+}
+
+.services__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service__card {
+    flex-basis: 30%;
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
+.service__image {
+    margin: 0 0 20px 0;
+    min-width: 288px;
+    max-width: 100%;
+    height: auto;
+}
+
+.service__card__title {
+    margin: 0 0 8px 0;
+}
+
+.service__card__caption {
+    margin: 0 0 16px 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+
 .footer__wrapper {
     padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.footer__legal {
-
 }
 
 .footer__legal__caption {

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Мир красоты</title>
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
@@ -15,7 +16,7 @@
 			<div class="header__wrapper">
 				<a class="header__logo" href="/">Мир красоты</a>
 
-				<nav class="header__menu menu">
+				<nav class="menu">
 					<ul class="menu__list">
 						<li class="menu__item">
 							<a href="#" class="menu__link">Услуги и цены</a>
@@ -42,11 +43,13 @@
 			</div>
 			<div class="hero__wrapper">
 				<div class="hero__text">
-					<h1>Создай свой образ вместе с нами</h1>
-					<div class="hero__text__subtitle">
-						Идеальный образ за 60 минут`
+					<div class="hero__title">
+						<h1>Создай свой образ вместе с нами</h1>
 					</div>
-					<button class="button button__l__pr">Записаться онлайн</button>
+					<div class="hero__text__subtitle">
+						Идеальный образ за 60 минут
+					</div>
+					<button class="button button__large">Записаться онлайн</button>
 				</div>
 
 				<div class="hero__image">
@@ -75,63 +78,150 @@
 		</div>
 	</header>
 
-	<div class="about">
-		<div class="container">
-			<div class="about__wrapper">
-				<div class="about__text">
-					<h2>О салоне</h2>
-					<div class="h2_subtitle">
-						Мир красоты — это уютный салон в самом центре города. Здесь работают профессиональные визажисты,
-						стилисты и мастера татуажа
+	<main class="main">
+		<div class="about">
+			<div class="container">
+				<div class="about__wrapper">
+					<div class="about__text">
+						<div class="section__title">
+							<h2>О салоне</h2>
+						</div>
+						<div class="subtitle">
+							Мир красоты — это уютный салон в самом центре города. Здесь работают профессиональные визажисты,
+							стилисты и мастера татуажа
+						</div>
+						<p class="body">
+							Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония
+							обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается
+							с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем
+							облике. Мы создаем стиль — вместе с Вами и для Вас.
+						</p>
 					</div>
-					<p class="body">
-						Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония
-						обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается
-						с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем
-						облике. Мы создаем стиль — вместе с Вами и для Вас.
-					</p>
-				</div>
-				<div class="about__video">
-					<div class="video__play">
-						<img class="video__play__icon" src="assets/images/icons/play.svg">
-					</div>
-					<div class="video__play__text">
-						Короткое видео о нас
+
+					<div class="about__video">
+						<div class="video__play">
+							<img class="video__play__icon" src="assets/images/icons/play.svg">
+						</div>
+						<div class="video__play__text">
+							Короткое видео о нас
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="advantages">
-		<div class="container">
-			<div class="advantages__wraper">
-				<div class="advantages__card">
-					<img class="advantages__card__icon" src="assets/images/icons/offices.svg">
-					<h3>Удобные кабинеты</h3>
-					<p class="advantages__card__text">
-						Комфорт и стиль — принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас.
-					</p>
-				</div>
-
-				<div class="advantages__card">
-					<img class="advantages__card__icon" src="assets/images/icons/cosmetics.svg">
-					<h3>Качественная косметика</h3>
-					<p class="advantages__card__text">
-						Используем профессиональные материалы высшего качества лучших брендов.
-					</p>
-				</div>
-
-				<div class="advantages__card">
-					<img class="advantages__card__icon" src="assets/images/icons/masters.svg">
-					<h3>Опытные мастера</h3>
-					<p class="advantages__card__text">
-						Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера.
-					</p>
+	
+		<div class="advantages">
+			<div class="container">
+				<div class="advantages__wraper">
+					<div class="advantages__card">
+						<img class="advantages__card__icon" src="assets/images/icons/offices.svg">
+						<div class="advantages__card__title">
+							<h3>Удобные кабинеты</h3>
+						</div>
+						<p class="advantages__card__text">
+							Комфорт и стиль — принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас.
+						</p>
+					</div>
+	
+					<div class="advantages__card">
+						<img class="advantages__card__icon" src="assets/images/icons/cosmetics.svg">
+						<div class="advantages__card__title">
+							<h3>Качественная косметика</h3>
+						</div>
+						<p class="advantages__card__text">
+							Используем профессиональные материалы высшего качества лучших брендов.
+						</p>
+					</div>
+	
+					<div class="advantages__card">
+						<img class="advantages__card__icon" src="assets/images/icons/masters.svg">
+						<div class="advantages__card__title">
+							<h3>Опытные мастера</h3>
+						</div>
+						<p class="advantages__card__text">
+							Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		
+		<div class="services">
+			<div class="container">
+				<div class="services__wrapper">
+						<div class="section__title">
+							<h2>Популярные услуги</h2>
+						</div>
+						<div class="services__cards">
+							<a class="service__card" href="#">
+								<img class="service__image" src="assets/images/services.jpg">
+								<div class="service__text">
+									<div class="service__card__title">
+										<h3>Маникюр</h3>
+									</div>
+									<p class="service__card__caption">
+										Аппаратный, комбинированный или классический.
+									</p>
+									<button class="button">Записаться</button>
+								</div>
+							</a>
+
+							<a class="service__card" href="#">
+								<img class="service__image" src="assets/images/services.jpg">
+								<div class="service__text">
+									<div class="service__card__title">
+										<h3>Покрытие гель-лак</h3>
+									</div>
+									<p class="service__card__caption">
+										Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой полимеризуется в LED-лампе.
+									</p>
+									<button class="button">Записаться</button>
+								</div>
+							</a>
+
+							<a class="service__card" href="#">
+								<img class="service__image" src="assets/images/services.jpg">
+								<div class="service__text">
+									<div class="service__card__title">
+										<h3>Бразильский маникюр</h3>
+									</div>
+									<p class="service__card__caption">
+										Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.
+									</p>
+									<button class="button">Записаться</button>
+								</div>
+							</a>
+
+							<a class="service__card" href="#">
+								<img class="service__image" src="assets/images/services.jpg">
+								<div class="service__text">
+									<div class="service__card__title">
+										<h3>Педикюр</h3>
+									</div>
+									<p class="service__card__caption">
+										Аппаратный, комбинированный или классический.
+									</p>
+									<button class="button">Записаться</button>
+								</div>
+							</a>
+
+							<a class="service__card" href="#">
+								<img class="service__image" src="assets/images/services.jpg">
+								<div class="service__text">
+									<div class="service__card__title">
+										<h3>Парафинотерапия</h3>
+									</div>
+									<p class="service__card__caption">
+										Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.
+									</p>
+									<button class="button">Записаться</button>
+								</div>
+							</a>
+						</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
 	<footer class="footer">
 		<div class="container">
