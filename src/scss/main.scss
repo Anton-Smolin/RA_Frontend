@@ -1,10 +1,21 @@
+$dark: #333;
+$green: #00BF78;
+$orange: #FB9475;
+$link: #278AFF;
+$light-gray: #F8F6F7;
+$white: #fff;
+
 html,
 body {
     box-sizing: border-box;
     min-width: 320px;
     height: 100%;
-    color: #333;
+    color: $dark;
     font-family: "Montserrat", sans-serif;
+}
+
+body.body--lock {
+    overflow: hidden;
 }
 
 *,
@@ -38,12 +49,12 @@ h3 {
 
 a {
     text-decoration: underline;
-    color: #278AFF;
+    color: $link;
     transition: all .2s;
     cursor: pointer;
 
     &:hover {
-        color: #00BF78;
+        color: $green;
     }
 }
 
@@ -75,7 +86,7 @@ a {
 }
 
 .header {
-    background: #F8F6F7 url("/assets/images/hero_bg.jpg") repeat;
+    background: $light-gray url("/assets/images/hero_bg.jpg") repeat;
 
     .container {
         position: relative;
@@ -85,7 +96,7 @@ a {
 
     &__wrapper {
         margin: 0 0 120px 0;
-        z-index: 1;
+        z-index: 2;
         display: flex;
         position: relative;
         justify-content: space-between;
@@ -95,14 +106,14 @@ a {
 
     &__logo {
         min-width: fit-content;
-        color: #333;
+        color: $dark;
         font-weight: 700;
         font-size: 24px;
         line-height: 29px;
         text-decoration: none;
 
         &:hover {
-            color: #333;
+            color: $dark;
         }
     }
 
@@ -111,7 +122,7 @@ a {
         min-width: fit-content;
 
         &__phone {
-            color: #333;
+            color: $dark;
             font-weight: 500;
             font-size: 18px;
             line-height: 14px;
@@ -131,7 +142,11 @@ nav {
 }
 
 .menu {
-    ul {
+    &__icon {
+        display: none;
+    }
+
+    &__list {
         margin: 0;
         padding: 0;
         display: flex;
@@ -142,37 +157,11 @@ nav {
     }
 
     &__link {
-        color: #333;
+        color: $dark;
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
         text-decoration: none;
-    }
-
-    &__mobile {
-        display: none;
-    }
-
-    &__icon {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__icon span {
-        display: block;
-        width: 32px;
-        height: 3px;
-        position: relative;
-        background: #333;
-        border-radius: 3px;
-    }
-
-    &__icon span:not(:last-child) {
-        margin: 0px 0px 5px 0px;
     }
 }
 
@@ -199,8 +188,8 @@ nav {
     padding: 10px 20px;
     border-radius: 48px;
     border: 0;
-    background: #FB9475;
-    color: #FFFFFF;
+    background: $orange;
+    color: $white;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
@@ -232,7 +221,7 @@ nav {
         width: 472px;
         height: 472px;
         border-radius: 50%;
-        background-color: #FB9475;
+        background-color: $orange;
         transition: all .5s;
     }
 
@@ -310,6 +299,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .video__play {
@@ -324,7 +314,7 @@ nav {
     }
 
     &__text {
-        color: #fff;
+        color: $white;
         font-weight: 500;
         font-size: 16px;
         line-height: 26px;
@@ -401,7 +391,7 @@ nav {
     flex-direction: column;
     flex-basis: 30%;
     gap: 20px;
-    color: #333;
+    color: $dark;
     text-decoration: none;
 
     &__image {
@@ -416,12 +406,12 @@ nav {
 
     &__caption {
         margin: 0px 0px 16px 0px;
-        color: #333;
+        color: $dark;
         font-size: 12px;
         line-height: 20px;
 
         &:hover {
-            color: #333;
+            color: $dark;
         }
     }
 }
@@ -440,18 +430,18 @@ nav {
 
 .tab {
     min-width: fit-content;
-    color: #333;
+    color: $dark;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     text-decoration: none;
 
     &:hover {
-        color: #00BF78;
+        color: $green;
     }
 
     &--active {
-        color: #00BF78;
+        color: $green;
         text-decoration: underline 2px;
         text-underline-offset: 6px;
     }
@@ -486,7 +476,7 @@ nav {
 
     &__price {
         min-width: fit-content;
-        color: #00BF78;
+        color: $green;
         font-size: 20px;
         font-weight: 600;
         line-height: 24px;
@@ -494,7 +484,7 @@ nav {
 }
 
 .masters {
-    background: #F8F6F7;
+    background: $light-gray;
 
     &__wrapper {
         padding: 80px 0px;
@@ -509,12 +499,12 @@ nav {
 
 .master-card {
     position: relative;
-    color: #333;
+    color: $dark;
     text-decoration: none;
     transition: all .2s;
 
     &:hover {
-        color: #333;
+        color: $dark;
     }
 
     &__image:hover:after {
@@ -525,7 +515,7 @@ nav {
         position: absolute;
         top: 0;
         left: 0;
-        color: #FFFFFF;
+        color: $white;
         background: rgba(0, 0, 0, 0.5);
         border-radius: 8px;
         justify-content: center;
@@ -584,7 +574,7 @@ nav {
     transition: all .2s;
 
     &:hover {
-        background-color: #F8F6F7;
+        background-color: $light-gray;
     }
 
     &--left {
@@ -619,7 +609,7 @@ nav {
         position: absolute;
         top: 0;
         left: 0;
-        color: #FFFFFF;
+        color: $white;
         background: rgba(0, 0, 0, 0.5) url(/assets/images/icons/zoom.svg) no-repeat center;
         background-position-y: 42%;
         border-radius: 8px;
@@ -666,7 +656,7 @@ nav {
 }
 
 .contacts {
-    background: #F8F6F7;
+    background: $light-gray;
 
     &__wrapper {
         display: flex;
@@ -686,7 +676,7 @@ nav {
         display: block;
         margin: 0px 0px 20px 0px;
         width: fit-content;
-        color: #333;
+        color: $dark;
         text-decoration: none;
     }
 
@@ -702,7 +692,7 @@ nav {
     max-width: 445px;
     display: flex;
     flex-direction: column;
-    background: #FFFFFF;
+    background: $white;
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px #00000026;
 
@@ -761,7 +751,7 @@ nav {
 }
 
 .menu__link_footer {
-    color: #333;
+    color: $dark;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
@@ -817,22 +807,125 @@ nav {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+    .header__wrapper {
+        align-items: center;
+    }
+    
+    .menu {
+        &__icon {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            cursor: pointer;
+            z-index: 3;
+        }
+    
+        &__icon span {
+            display: block;
+            width: 32px;
+            height: 3px;
+            right: 0;
+            position: relative;
+            background: $dark;
+            border-radius: 3px;
+            transform: scale(1);
+            transition: all .3s;
+        }
+
+        &__icon::before {
+            content: "";
+            width: 32px;
+            height: 3px;
+            top: 0;
+            right: 0;
+            position: relative;
+            display: block;
+            background: $dark;
+            border-radius: 3px;
+            transition: all .3s;
+        }
+
+        &__icon::after {
+            content: "";
+            width: 32px;
+            height: 3px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+            display: block;
+            background: $dark;
+            border-radius: 3px;
+            transition: all .3s;
+        }
+
+        &__icon {
+            &--active span{
+                transform: scale(0);
+            }
+
+            &--active::before {
+                top: 29%;
+                transform: rotate(-45deg);
+            }
+
+            &--active::after {
+                bottom: 25%;
+                transform: rotate(45deg);
+            }
+        }
+
+        &__body {
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: $white;
+            transition: all .3s ease-in-out;
+            overflow: auto;
+
+            &--active {
+                top: 0;
+            }
+        }
+
+        &__item {
+            text-align: center;
+        }
+
+        &__link {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+    
     .menu ul {
+        flex-direction: column;
         justify-content: center;
+        gap: 28px;
     }
 
-    .about__wrapper {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
+    .about {
+        &__wrapper {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-    .about__text {
-        max-width: 100%;
-    }
+        &__text {
+            max-width: 100%;
+        }
 
-    .about__video {
-        width: 100%;
+        &__video {
+            width: 100%;
+        }
     }
 
     .advantages__wraper {
@@ -861,12 +954,14 @@ nav {
         margin: 50px 0px 50px 0px;
     }
 
-    .brand-logo__cards {
-        gap: 24px;
-    }
+    .brand-logo {
+        &__cards {
+            gap: 24px;
+        }
 
-    .brand-logo__image {
-        max-height: 48px;
+        &__image {
+            max-height: 48px;
+        }
     }
 
     .contact-form {
@@ -899,8 +994,8 @@ nav {
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            align-items: center;
+            align-items: normal;
+            gap: 14px;
         }
 
         &__logo {
@@ -913,13 +1008,15 @@ nav {
     }
 
     .menu {
-        display: none;
-
-        &__mobile {
-            display: flex;
+        &__icon {
             position: absolute;
             top: -5px;
             right: 0px;
+        }
+
+        &__link {
+            font-size: 24px;
+            line-height: 32px;
         }
     }
 
@@ -1011,37 +1108,43 @@ nav {
         max-width: 160px;
     }
 
-    .brand-logo__cards {
-        flex-wrap: wrap;
-        justify-content: center;
+    .brand-logo {
+        &__cards {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__image {
+            max-height: 40px;
+        }
     }
 
-    .brand-logo__image {
-        max-height: 40px;
-    }
+    .contacts {
+        &__wrapper {
+            flex-direction: column;
+        }
 
-    .contacts__wrapper {
-        flex-direction: column;
-    }
-
-    .contacts__info {
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 30px 0px;
+        &__info {
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 30px 0px;
+        }
     }
 
     .contact-form {
         max-width: 100%;
     }
 
-    .footer__wrapper {
-        flex-direction: column-reverse;
-        align-items: start;
-        gap: 30px;
-    }
+    .footer {
+        &__wrapper {
+            flex-direction: column-reverse;
+            align-items: start;
+            gap: 30px;
+        }
 
-    .footer__list {
-        flex-wrap: wrap;
-        gap: 16px 0px;
+        &__list {
+            flex-wrap: wrap;
+            gap: 16px 0px;
+        }
     }
 }
 
@@ -1055,6 +1158,13 @@ nav {
         margin: 0px 0px 40px 0px;
     }
 
+    .menu {
+        &__link {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
     .hero {
         &__subtitle {
             margin: 0px 0px 40px 0px;
@@ -1062,6 +1172,7 @@ nav {
     }
 
     .socials--hero {
+        bottom: 24px;
         padding: 0% 24% 0% 24%;
     }
 

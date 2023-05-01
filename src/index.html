@@ -16,33 +16,31 @@
 			<div class="header__wrapper">
 				<a class="header__logo" href="/">Мир красоты</a>
 
-				<nav class="menu">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#" class="menu__link">Услуги и цены</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Мастера</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Наши работы</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">О нас</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-
-				<nav class="menu__mobile">
+				<div class="header__menu menu">
 					<div class="menu__icon">
 						<span></span>
-						<span></span>
-						<span></span>
 					</div>
-				</nav>
+
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a data-goto=".services" href="#" class="menu__link">Услуги и цены</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".masters" href="#" class="menu__link">Мастера</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".portfolio" href="#" class="menu__link">Наши работы</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".about" href="#" class="menu__link">О нас</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".contacts" href="#" class="menu__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 
 				<div class="header__info">
 					<a class="header__info__phone" href="tel:+7 (499) 686-17-62">8 (499) 686-17-62</a>
@@ -549,6 +547,8 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="./js/main.js"></script>
 </body>
 
 </html>

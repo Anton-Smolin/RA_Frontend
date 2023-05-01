@@ -34,20 +34,30 @@ function buildHtml() {
         .pipe(browserSync.stream());
 }
 
+//Таск работы с js файлами
+function buildJs() {
+    return src('src/**/*.js')
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream());
+}
+
 // Таск копирования статичных файлов
 function copy() {
-    return src(['src/assets/images/**/*.*']).pipe(dest('dist/assets/images'));
+    return src(['src/assets/images/**/*.*'])
+        .pipe(dest('dist/assets/images'));
 }
 
 // Таск очистки dist
 function cleanDist() {
-    return src('dist', { allowEmpty: true }).pipe(clean());
+    return src('dist', { allowEmpty: true })
+        .pipe(clean());
 }
 
 // Таск отслеживания изменения файлов
 function serve() {
     watch('src/scss/**/*.scss', buildSass);
     watch('src/**/*.html', buildHtml);
+    watch('src/js/**/*.js', buildJs);
 }
 
 // Создание дев-сервера
@@ -58,5 +68,5 @@ function createDevServer() {
     })
 }
 
-exports.build = series(cleanDist, buildSass, buildHtml, copy);
+exports.build = series(cleanDist, buildSass, buildHtml, buildJs, copy);
 exports.default = series(buildSass, parallel(createDevServer, serve));
