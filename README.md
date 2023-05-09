@@ -1,4 +1,4 @@
 # BeautyWorld
 Смолин Антон Евгеньевич
 
-Deploy: https://sprint3--ra-frontend-beauty-world.netlify.app/
+Deploy: https://deploy-preview-3--ra-frontend-beauty-world.netlify.app/
