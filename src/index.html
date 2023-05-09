@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.min.css">
 </head>
 
 <body class="wrapper">
@@ -105,7 +107,7 @@
 						</p>
 					</div>
 
-					<a class="about__video" href="#">
+					<a class="about__video" data-fancybox href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab">
 						<div class="video__play">
 							<img class="video__play__icon" src="assets/images/icons/play.svg">
 						</div>
@@ -239,78 +241,300 @@
 					<div class="section__title">
 						<h2>Услуги и цены</h2>
 					</div>
-					<div class="tabs">
-						<a class="tab tab--active" href="#">Стрижка и укладка</a>
-						<a class="tab" href="#">Косметология</a>
-						<a class="tab" href="#">Маникюр и педикюр</a>
-						<a class="tab" href="#">Макияж</a>
-						<a class="tab" href="#">Брови и ресницы</a>
-						<a class="tab" href="#">Массаж</a>
-					</div>
+					<div id="priceTabs" class="tabs">
+						<ul class="tabs__links">
+							<li class="tab" data-tab="#tab_1">Стрижка и укладка</li>
+							<li class="tab" data-tab="#tab_2">Косметология</li>
+							<li class="tab" data-tab="#tab_3">Маникюр и педикюр</li>
+							<li class="tab" data-tab="#tab_4">Макияж</li>
+							<li class="tab" data-tab="#tab_5">Брови и ресницы</li>
+							<li class="tab" data-tab="#tab_6">Массаж</li>
+						</ul>
 
-					<div class="tab__content">
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Женская стрижка</div>
-								<p class="price-item__description">Короткие волосы</p>
-							</div>
-							<div class="price-item__price">1200 ₽</div>
-						</div>
+						<div class="tabs__content">
+							<div class="tab__content" id="tab_1">
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Женская стрижка</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Стрижка бороды и усов</div>
-								<p class="price-item__description">Короткие волосы</p>
-							</div>
-							<div class="price-item__price">1200 ₽</div>
-						</div>
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Стрижка бороды и усов</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Мужская стрижка</div>
-								<p class="price-item__description">Короткие волосы</p>
-							</div>
-							<div class="price-item__price">1200 ₽</div>
-						</div>
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Мужская стрижка</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Экспресс укладка</div>
-								<p class="price-item__description">Короткие волосы</p>
-							</div>
-							<div class="price-item__price">1200 ₽</div>
-						</div>
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Экспресс укладка</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Детский стиль</div>
-								<p class="price-item__description">Короткие волосы</p>
-							</div>
-							<div class="price-item__price">1200 ₽</div>
-						</div>
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Детский стиль</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Дневная укладка</div>
-								<p class="price-item__description">Короткие волосы</p>
-							</div>
-							<div class="price-item__price">1200 ₽</div>
-						</div>
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Дневная укладка</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Креативный стиль</div>
-								<p class="price-item__description">Короткие волосы</p>
-							</div>
-							<div class="price-item__price">1200 ₽</div>
-						</div>
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Креативный стиль</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 
-						<div class="price-item">
-							<div class="price-item__text">
-								<div class="price-item__title">Прическа вечерняя (свадебная)</div>
-								<p class="price-item__description">Короткие волосы</p>
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Прическа вечерняя (свадебная)</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
 							</div>
-							<div class="price-item__price">1200 ₽</div>
+
+							<div class="tab__content" id="tab_2">
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Женская косметология</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Мужская косметология</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Детская косметология</div>
+										<p class="price-item__description">Короткие волосы</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+							</div>
+
+							<div class="tab__content" id="tab_3">
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Женский маникюр</div>
+										<p class="price-item__description">Ногти</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Мужской маникюр</div>
+										<p class="price-item__description">Ногти</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Детский маникюр</div>
+										<p class="price-item__description">Ногти</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Женский педикюр</div>
+										<p class="price-item__description">Ногти</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Мужской педикюр</div>
+										<p class="price-item__description">Ногти</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Детский педикюр</div>
+										<p class="price-item__description">Ногти</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+							</div>
+
+							<div class="tab__content" id="tab_4">
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Дневной макияж</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Вечерний макияж</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Деловой макияж</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Креативный стиль</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Экспресс макияж</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Свадебный макияж</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+							</div>
+
+							<div class="tab__content" id="tab_5">
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Окрашивание бровей</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Окрашивание ресниц</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Наращивание бровей</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Наращивание ресниц</div>
+										<p class="price-item__description">Лицо</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+							</div>
+
+							<div class="tab__content" id="tab_6">
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Тайский массаж</div>
+										<p class="price-item__description">Тело</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Массаж головы</div>
+										<p class="price-item__description">Голова</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Спортивный массаж</div>
+										<p class="price-item__description">Тело</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Антицеллюлитный массаж</div>
+										<p class="price-item__description">Тело</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Баночный массаж</div>
+										<p class="price-item__description">Тело</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Точечный массаж</div>
+										<p class="price-item__description">Тело</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+
+								<div class="price-item">
+									<div class="price-item__text">
+										<div class="price-item__title">Классический массаж</div>
+										<p class="price-item__description">Тело</p>
+									</div>
+									<div class="price-item__price">1200 ₽</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -376,36 +600,34 @@
 					</div>
 
 					<div class="slider-arrows">
-						<button class="slider-arrow slider-arrow--left"></button>
-						<button class="slider-arrow slider-arrow--right"></button>
 					</div>
 				</div>
 			</div>
 
 			<div class="portfolio-cards">
-				<div class="portfolio-card">
+				<a class="portfolio-card" data-fancybox="gallery" href="/assets/images/portfolio-1.jpg">
 					<img class="portfolio-image" src="/assets/images/portfolio-1.jpg" alt="Lips painting">
-				</div>
+				</a>
 
-				<div class="portfolio-card">
+				<a class="portfolio-card" data-fancybox="gallery" href="/assets/images/portfolio-2.jpg">
 					<img class="portfolio-image" src="/assets/images/portfolio-2.jpg" alt="Girl with makeup">
-				</div>
+				</a>
 
-				<div class="portfolio-card">
+				<a class="portfolio-card" data-fancybox="gallery" href="/assets/images/portfolio-3.jpg">
 					<img class="portfolio-image" src="/assets/images/portfolio-3.jpg" alt="Red nails">
-				</div>
+				</a>
 
-				<div class="portfolio-card">
+				<a class="portfolio-card" data-fancybox="gallery" href="/assets/images/portfolio-4.jpg">
 					<img class="portfolio-image" src="/assets/images/portfolio-4.jpg" alt="Long blonde hairs">
-				</div>
+				</a>
 
-				<div class="portfolio-card">
+				<a class="portfolio-card" data-fancybox="gallery" href="/assets/images/portfolio-1.jpg">
 					<img class="portfolio-image" src="/assets/images/portfolio-1.jpg" alt="Lips painting">
-				</div>
+				</a>
 
-				<div class="portfolio-card">
+				<a class="portfolio-card" data-fancybox="gallery" href="/assets/images/portfolio-3.jpg">
 					<img class="portfolio-image" src="/assets/images/portfolio-3.jpg" alt="Red nails">
-				</div>
+				</a>
 			</div>
 		</div>
 
@@ -500,7 +722,7 @@
 							Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.
 						</div>
 
-						<form class="contact-form__form" method="post">
+						<form id="contact-form" class="contact-form__form" method="post">
 							<input class="input" type="text" name="name" required placeholder="Ваше имя">
 							<input class="input" type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
 							<button class="button button--large" type="submit">Записаться</button>
@@ -548,6 +770,11 @@
 		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="./js/slick.min.js"></script>
+	<script src="./js/slick-slider.js"></script>
+	<script src="./js/jquery.fancybox.min.js"></script>
+	<script src="./js/fancybox.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 

@@ -37,7 +37,7 @@ function buildHtml() {
 //Таск работы с js файлами
 function buildJs() {
     return src('src/**/*.js')
-        .pipe(dest('dist/js'))
+        .pipe(dest('dist'))
         .pipe(browserSync.stream());
 }
 
