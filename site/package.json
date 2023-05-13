@@ -1,0 +1,38 @@
+{
+  "name": "ra_frontend",
+  "version": "1.0.0",
+  "description": "Смолин Антон Евгеньевич",
+  "main": "main.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.22",
+    "sass": "^1.62.0",
+    "terser-webpack-plugin": "^5.3.8",
+    "webpack": "^5.82.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^5.0.17",
+    "normalize.css": "^8.0.1"
+  }
+}
